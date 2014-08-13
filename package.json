@@ -1,6 +1,6 @@
 {
   "name": "split-lines",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Split lines into an array of lines",
   "license": "MIT",
   "repository": "sindresorhus/split-lines",
