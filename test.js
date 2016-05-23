@@ -6,7 +6,18 @@ test('split lines', t => {
 });
 
 test('retain line separators', t => {
-	t.deepEqual(m('foo\r\nbar\r\nbaz\nrainbow', true), ['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']);
-	t.deepEqual(m('\nfoo\r\nbar\r\nbaz\nrainbow', true), ['\n', 'foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']);
-	t.deepEqual(m('\nfoo\r\nbar\r\nbaz\nrainbow\n', true), ['\n', 'foo\r\n', 'bar\r\n', 'baz\n', 'rainbow\n', '']);
+	t.deepEqual(
+		m('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true}),
+		['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']
+	);
+
+	t.deepEqual(
+		m('\nfoo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true}),
+		['\n', 'foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']
+	);
+
+	t.deepEqual(
+		m('\nfoo\r\nbar\r\nbaz\nrainbow\n', {preserveNewlines: true}),
+		['\n', 'foo\r\n', 'bar\r\n', 'baz\n', 'rainbow\n', '']
+	);
 });

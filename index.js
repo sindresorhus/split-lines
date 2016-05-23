@@ -1,8 +1,10 @@
 'use strict';
-module.exports = function (str, preserveNewlines) {
+module.exports = function (str, opts) {
 	if (typeof str !== 'string') {
 		throw new TypeError('Expected a string');
 	}
+
+	var preserveNewlines = opts && opts.preserveNewlines;
 
 	if (!preserveNewlines) {
 		return str.split(/\r?\n/);
