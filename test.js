@@ -5,7 +5,7 @@ test('split lines', t => {
 	t.deepEqual(m('foo\r\nbar\r\nbaz\nrainbow'), ['foo', 'bar', 'baz', 'rainbow']);
 });
 
-test('retain line separators', t => {
+test('preserveNewlines option', t => {
 	t.deepEqual(
 		m('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true}),
 		['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']

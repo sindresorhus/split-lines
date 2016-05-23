@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function (str, opts) {
 	if (typeof str !== 'string') {
-		throw new TypeError('Expected a string');
+		throw new TypeError('Expected a string in the first argument, got ' + typeof str);
 	}
 
 	var preserveNewlines = opts && opts.preserveNewlines;

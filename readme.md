@@ -5,7 +5,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save split-lines
 ```
 
@@ -13,7 +13,7 @@ $ npm install --save split-lines
 ## Usage
 
 ```js
-var splitLines = require('split-lines');
+const splitLines = require('split-lines');
 
 splitLines('foo\r\nbar\r\nbaz\nrainbow');
 //=> ['foo', 'bar', 'baz', 'rainbow']
@@ -28,7 +28,7 @@ splitLines('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true});
 
 #### input
 
-type: `string`
+Type: `string`
 
 String to split.
 
@@ -36,10 +36,11 @@ String to split.
 
 ##### preserveNewlines
 
-type: `boolean`<br>
-default: `false`
+Type: `boolean`<br>
+Default: `false`
 
-Preserve the separators at the end of every line. Except the last line, which will never contain a line separator.
+Preserve the line separator at the end of every line, except the last line, which will never contain one.
+
 
 ## License
 

@@ -7,7 +7,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -19,14 +19,15 @@
     "index.js"
   ],
   "keywords": [
+    "split",
+    "lines",
+    "line",
     "string",
     "str",
-    "split",
     "newline",
+    "newlines",
     "linebreak",
     "line-break",
-    "line",
-    "lines",
     "lf",
     "crlf",
     "eol",
