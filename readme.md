@@ -17,9 +17,30 @@ var splitLines = require('split-lines');
 
 splitLines('foo\r\nbar\r\nbaz\nrainbow');
 //=> ['foo', 'bar', 'baz', 'rainbow']
+
+splitLines('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true});
+//=> ['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']
 ```
 
+## API
+
+### splitLines(input, [options])
+
+#### input
+
+type: `string`
+
+String to split.
+
+#### options
+
+##### preserveNewlines
+
+type: `boolean`<br>
+default: `false`
+
+Preserve the separators at the end of every line. Except the last line, which will never contain a line separator.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
