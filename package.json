@@ -33,7 +33,7 @@
     "linefeed"
   ],
   "devDependencies": {
-    "ava": "^0.14.0",
-    "xo": "^0.15.1"
+    "ava": "*",
+    "xo": "*"
   }
 }

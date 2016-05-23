@@ -19,12 +19,26 @@ splitLines('foo\r\nbar\r\nbaz\nrainbow');
 //=> ['foo', 'bar', 'baz', 'rainbow']
 
 splitLines('foo\r\nbar\r\nbaz\nrainbow', true);
-//=> ['foo\rn', 'bar\r\n', 'baz\n', 'rainbow']
+//=> ['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']
 ```
 
-Not that the default behavior is to discard the separator characters. There is an optional second parameter `retainLineSeparators`, that causes the separators to be retained at the end of every line (except the last line, which will never contain a line separator).
+## API
 
+### splitLines(input, [preserveNewlines])
+
+#### input
+
+type: `string`
+
+String to split.
+
+#### preserveNewlines
+
+type: `boolean`<br>
+default: `false`
+
+Preserve the separators at the end of every line. Except the last line, which will never contain a line separator.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
