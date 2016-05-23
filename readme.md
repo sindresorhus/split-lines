@@ -18,13 +18,13 @@ var splitLines = require('split-lines');
 splitLines('foo\r\nbar\r\nbaz\nrainbow');
 //=> ['foo', 'bar', 'baz', 'rainbow']
 
-splitLines('foo\r\nbar\r\nbaz\nrainbow', true);
+splitLines('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true});
 //=> ['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']
 ```
 
 ## API
 
-### splitLines(input, [preserveNewlines])
+### splitLines(input, [options])
 
 #### input
 
@@ -32,7 +32,9 @@ type: `string`
 
 String to split.
 
-#### preserveNewlines
+#### options
+
+##### preserveNewlines
 
 type: `boolean`<br>
 default: `false`
