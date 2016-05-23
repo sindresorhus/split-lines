@@ -1,7 +1,12 @@
-'use strict';
-var assert = require('assert');
-var splitLines = require('./');
+import test from 'ava';
+import fn from './';
 
-it('should split lines', function () {
-	assert.equal(splitLines('foo\r\nbar\r\nbaz\nrainbow').length, 4);
+test('should split lines', t => {
+	t.deepEqual(fn('foo\r\nbar\r\nbaz\nrainbow'), ['foo', 'bar', 'baz', 'rainbow']);
+});
+
+test('retain line separators', t => {
+	t.deepEqual(fn('foo\r\nbar\r\nbaz\nrainbow', true), ['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']);
+	t.deepEqual(fn('\nfoo\r\nbar\r\nbaz\nrainbow', true), ['\n', 'foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']);
+	t.deepEqual(fn('\nfoo\r\nbar\r\nbaz\nrainbow\n', true), ['\n', 'foo\r\n', 'bar\r\n', 'baz\n', 'rainbow\n', '']);
 });
