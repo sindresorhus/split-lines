@@ -1,19 +1,21 @@
 'use strict';
-module.exports = function (str, opts) {
+module.exports = (str, opts) => {
+	opts = Object.assign({
+		preserveNewLines: false
+	}, opts);
+
 	if (typeof str !== 'string') {
-		throw new TypeError('Expected a string in the first argument, got ' + typeof str);
+		throw new TypeError(`Expected input to be of type \`string\`, got \`${typeof str}\``);
 	}
 
-	var preserveNewlines = opts && opts.preserveNewlines;
-
-	if (!preserveNewlines) {
+	if (!opts.preserveNewlines) {
 		return str.split(/\r?\n/);
 	}
 
-	var parts = str.split(/(\r?\n)/);
-	var lines = [];
+	const parts = str.split(/(\r?\n)/);
+	const lines = [];
 
-	for (var i = 0; i < parts.length; i += 2) {
+	for (let i = 0; i < parts.length; i += 2) {
 		lines.push(parts[i] + (parts[i + 1] || ''));
 	}
 
