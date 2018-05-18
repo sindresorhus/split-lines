@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save split-lines
+$ npm install split-lines
 ```
 
 
@@ -33,6 +33,8 @@ Type: `string`
 String to split.
 
 #### options
+
+Type: `Object`
 
 ##### preserveNewlines
 

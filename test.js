@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 test('split lines', t => {
 	t.deepEqual(m('foo\r\nbar\r\nbaz\nrainbow'), ['foo', 'bar', 'baz', 'rainbow']);

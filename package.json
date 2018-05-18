@@ -1,40 +1,40 @@
 {
-  "name": "split-lines",
-  "version": "1.1.0",
-  "description": "Split lines into an array of lines",
-  "license": "MIT",
-  "repository": "sindresorhus/split-lines",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "split",
-    "lines",
-    "line",
-    "string",
-    "str",
-    "newline",
-    "newlines",
-    "linebreak",
-    "line-break",
-    "lf",
-    "crlf",
-    "eol",
-    "linefeed"
-  ],
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "split-lines",
+	"version": "1.1.0",
+	"description": "Split lines into an array of lines",
+	"license": "MIT",
+	"repository": "sindresorhus/split-lines",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"split",
+		"lines",
+		"line",
+		"string",
+		"str",
+		"newline",
+		"newlines",
+		"linebreak",
+		"line-break",
+		"lf",
+		"crlf",
+		"eol",
+		"linefeed"
+	],
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }
