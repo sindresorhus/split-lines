@@ -1,4 +1,4 @@
-# split-lines [![Build Status](https://travis-ci.org/sindresorhus/split-lines.svg?branch=master)](https://travis-ci.org/sindresorhus/split-lines)
+# split-lines
 
 > Split lines into an array of lines
 
