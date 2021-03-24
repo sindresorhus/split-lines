@@ -24,6 +24,6 @@ splitLines('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true});
 //=> ['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']
 ```
 */
-declare function splitLines (input: string, options?: splitLines.Options): string[];
+declare function splitLines(input: string, options?: splitLines.Options): string[];
 
 export = splitLines;
