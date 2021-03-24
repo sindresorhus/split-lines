@@ -1,23 +1,23 @@
 import test from 'ava';
-import m from '.';
+import splitLines from './index.js';
 
 test('split lines', t => {
-	t.deepEqual(m('foo\r\nbar\r\nbaz\nrainbow'), ['foo', 'bar', 'baz', 'rainbow']);
+	t.deepEqual(splitLines('foo\r\nbar\r\nbaz\nrainbow'), ['foo', 'bar', 'baz', 'rainbow']);
 });
 
 test('preserveNewlines option', t => {
 	t.deepEqual(
-		m('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true}),
+		splitLines('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true}),
 		['foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']
 	);
 
 	t.deepEqual(
-		m('\nfoo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true}),
+		splitLines('\nfoo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true}),
 		['\n', 'foo\r\n', 'bar\r\n', 'baz\n', 'rainbow']
 	);
 
 	t.deepEqual(
-		m('\nfoo\r\nbar\r\nbaz\nrainbow\n', {preserveNewlines: true}),
+		splitLines('\nfoo\r\nbar\r\nbaz\nrainbow\n', {preserveNewlines: true}),
 		['\n', 'foo\r\n', 'bar\r\n', 'baz\n', 'rainbow\n', '']
 	);
 });

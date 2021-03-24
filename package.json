@@ -4,10 +4,11 @@
 	"description": "Split lines into an array of lines",
 	"license": "MIT",
 	"repository": "sindresorhus/split-lines",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
 		"node": ">=6"
@@ -35,8 +36,8 @@
 		"linefeed"
 	],
 	"devDependencies": {
-		"ava": "*",
+		"ava": "^2.4.0",
 		"tsd": "^0.14.0",
-		"xo": "*"
+		"xo": "^0.38.2"
 	}
 }

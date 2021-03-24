@@ -2,13 +2,11 @@
 
 > Split lines into an array of lines
 
-
 ## Install
 
 ```
 $ npm install split-lines
 ```
-
 
 ## Usage
 
@@ -24,7 +22,7 @@ splitLines('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true});
 
 ## API
 
-### splitLines(input, [options])
+### splitLines(input, options?)
 
 #### input
 
@@ -34,16 +32,11 @@ String to split.
 
 #### options
 
-Type: `Object`
+Type: `object`
 
 ##### preserveNewlines
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `false`
 
 Preserve the line separator at the end of every line, except the last line, which will never contain one.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
