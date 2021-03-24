@@ -4,8 +4,6 @@
 	"description": "Split lines into an array of lines",
 	"license": "MIT",
 	"repository": "sindresorhus/split-lines",
-	"types": "index.d.ts",
-	"typings": "index.d.ts",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
