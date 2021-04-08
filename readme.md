@@ -11,7 +11,7 @@ $ npm install split-lines
 ## Usage
 
 ```js
-const splitLines = require('split-lines');
+import splitLines from 'split-lines';
 
 splitLines('foo\r\nbar\r\nbaz\nrainbow');
 //=> ['foo', 'bar', 'baz', 'rainbow']
@@ -22,9 +22,9 @@ splitLines('foo\r\nbar\r\nbaz\nrainbow', {preserveNewlines: true});
 
 ## API
 
-### splitLines(input, options?)
+### splitLines(string, options?)
 
-#### input
+#### string
 
 Type: `string`
 
